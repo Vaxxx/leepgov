@@ -13,9 +13,9 @@ import { toastError, toastInfo, toastSuccess } from '@/App';
 import UserService from "../../services/UserService"
 
 const Login = () => {
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState<string | null>(null);
-    const [errorMessage, setErrorMessage] = useState(null);
+    // const [loading, setLoading] = useState(false);
+    // const [error, setError] = useState<string | null>(null);
+    // const [errorMessage, setErrorMessage] = useState(null);
     const [email, setEmail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
 
@@ -38,6 +38,7 @@ const Login = () => {
 
     const onSubmit = async(values: z.infer<typeof formSchema>) => {
         setEmail(values.email)
+        setPassword(values.password)
        console.log(values);
       
          //    first check if email exists -> if it does then proceedd
@@ -155,9 +156,12 @@ const Login = () => {
                                   />
                                  <div className=' relative  w-full'>
                                  <Button type="submit"
+                                 disabled={!form.formState.isValid}
                                  className="w-full py-2 text-white font-semibold rounded-md"
                                  style={{ backgroundColor: "hsla(148, 100%, 29%, 1)" }}
-                                 >Login</Button>
+                                 >Login
+                                 
+                                 </Button>
                                  </div>
                      
 
