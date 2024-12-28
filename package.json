@@ -1,6 +1,5 @@
 {
-  "name": "leepgov",
-  "homepage": "https://derossisuites.com/leep",
+  "name": "leepgov", 
   "private": true,
   "version": "0.0.0",
   "type": "module",
