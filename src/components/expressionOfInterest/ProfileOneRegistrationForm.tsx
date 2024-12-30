@@ -228,6 +228,9 @@ const ProfileOneRegistrationForm = () => {
                     <div className="flex justify-between">
                         <Link to="/"><img width={100} src={CoatOfArms} alt="Leep Logo" className="object-contain"
                             style={{ maxWidth: "100%", height: "auto" }} /></Link>
+                              <div className='h-12 w-12 p-1 rounded border-2 border-ring'>
+                                                            <ModeToggle/>
+                                                        </div>
                         <img width={100} src={RenewedHopeLogo} alt="Renewed Hope Logo" className="object-contain"
                             style={{ maxWidth: "100%", height: "auto" }} />
                     </div>
@@ -467,7 +470,7 @@ const ProfileOneRegistrationForm = () => {
 
                                 </div>
                                 <div className="flex justify-center gap-2">
-                                    <Button type="button" size="sm" className="w-2/5"><Link to="/">Back</Link></Button>
+                                    <Button type="button" size="sm" className="w-2/5 border-2 border-ring"><Link to="/">Back</Link></Button>
                                     <Button type="submit" size="sm" className=" w-2/5" disabled={!form.formState.isValid} style={{ backgroundColor: "hsl(113 100% 15%)" }}>{loading ? <span className="flex justify-evenly">Continue <LoadingSpinner /></span> : <span className="text-md font-semibold">Submit</span>}
                                     </Button>
                                 </div>

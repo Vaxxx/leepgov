@@ -110,7 +110,7 @@ const EmailVerification = () => {
              })
         }
 
-        toastSuccess("Congratulations, Your account has been Verified, Do head to your dashboard to complete your registration");
+        toastSuccess("Congratulations, Your account has been Verified, continue by heading to the login page");
         const data = await response.json().then((value) => {
             setSuccessMessage(value.message);
             toastSuccess(value.message);
@@ -214,7 +214,7 @@ const EmailVerification = () => {
                  </div>
                 </div>
 
-
+                <Link to="/login" className='text-lg text-indigo-400 underline'>LOGIN</Link>
             </div>
         </div>
        </motion.section>   
